@@ -1,0 +1,301 @@
+\hypertarget{source_8c}{}\doxysection{source.\+c File Reference}
+\label{source_8c}\index{source.c@{source.c}}
+
+
+Gestion du jeu SDL2.  
+
+
+{\ttfamily \#include \char`\"{}header.\+h\char`\"{}}\newline
+Include dependency graph for source.\+c\+:
+% FIG 0
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{source_8c_aeee2454954a0c8489b341607f0655c35}{init\+Plateformes}} (\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$lp, SDL\+\_\+\+Renderer $\ast$r, int level)
+\begin{DoxyCompactList}\small\item\em Initialise les plateformes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_ac1faa63584ce0e79f7499384cdb063d6}{update\+Plateformes}} (\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$lp)
+\begin{DoxyCompactList}\small\item\em Met à jour les plateformes mobiles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a09d0dd28d646fb210ce8f17287c46e3d}{render\+Plateformes}} (\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$lp, SDL\+\_\+\+Renderer $\ast$r, int camX)
+\begin{DoxyCompactList}\small\item\em Affiche les plateformes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_aacdf7f3c95d3ae575550709bbbbe514e}{destroy\+Plateformes}} (\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$lp)
+\begin{DoxyCompactList}\small\item\em Détruit les textures des plateformes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a19944c681a4c50441ce2c2b6ba251006}{init\+Timer}} (\mbox{\hyperlink{structTimer}{Timer}} $\ast$t)
+\begin{DoxyCompactList}\small\item\em Initialise le timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a89386fc02ee164f45da3ba5742a1217b}{render\+Timer}} (\mbox{\hyperlink{structTimer}{Timer}} $\ast$t, SDL\+\_\+\+Renderer $\ast$renderer, TTF\+\_\+\+Font $\ast$font)
+\begin{DoxyCompactList}\small\item\em Affiche le timer. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a0a1a8875e40c1827e5ceb3bfdab5c0c9}{init\+Guide}} (\mbox{\hyperlink{structGuide}{Guide}} $\ast$g, SDL\+\_\+\+Renderer $\ast$renderer, const char $\ast$path)
+\begin{DoxyCompactList}\small\item\em Initialise un guide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a7b6a5c9dfe57afe65d512e042401f663}{show\+Guide}} (\mbox{\hyperlink{structGuide}{Guide}} $\ast$g, int timed)
+\begin{DoxyCompactList}\small\item\em Active un guide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_aca747886254d0c8cf1a5edfc067f8f33}{update\+Guide}} (\mbox{\hyperlink{structGuide}{Guide}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Met à jour le guide. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a8c05edeaebd1c71299fec40e80857fa4}{render\+Guide}} (\mbox{\hyperlink{structGuide}{Guide}} $\ast$g, SDL\+\_\+\+Renderer $\ast$renderer)
+\begin{DoxyCompactList}\small\item\em Affiche le guide. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{source_8c_ae204477fe7b7e4d8dcb948699085fc5e}{init\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Initialise le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a066ef73d250a73a2fb80b78f8c4d49e4}{handle\+Input}} (\mbox{\hyperlink{structGame}{Game}} $\ast$g, int $\ast$running)
+\begin{DoxyCompactList}\small\item\em Gère les événements clavier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_ac9088da52d09528732f1726a2d5148b5}{update\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Met à jour le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_af5d0ee3a173af14558f209733134ddd2}{render\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Affiche le jeu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{source_8c_a362f7eecf35d2da164f5a7c344e79fd9}{clean\+Game}} (\mbox{\hyperlink{structGame}{Game}} $\ast$g)
+\begin{DoxyCompactList}\small\item\em Libère les ressources du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gestion du jeu SDL2. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{source_8c_a362f7eecf35d2da164f5a7c344e79fd9}\label{source_8c_a362f7eecf35d2da164f5a7c344e79fd9}} 
+\index{source.c@{source.c}!cleanGame@{cleanGame}}
+\index{cleanGame@{cleanGame}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{cleanGame()}{cleanGame()}}
+{\footnotesize\ttfamily void clean\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Libère les ressources du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Structure \mbox{\hyperlink{structGame}{Game}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_aacdf7f3c95d3ae575550709bbbbe514e}\label{source_8c_aacdf7f3c95d3ae575550709bbbbe514e}} 
+\index{source.c@{source.c}!destroyPlateformes@{destroyPlateformes}}
+\index{destroyPlateformes@{destroyPlateformes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{destroyPlateformes()}{destroyPlateformes()}}
+{\footnotesize\ttfamily void destroy\+Plateformes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$}]{lp }\end{DoxyParamCaption})}
+
+
+
+Détruit les textures des plateformes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp} & Liste des plateformes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_a066ef73d250a73a2fb80b78f8c4d49e4}\label{source_8c_a066ef73d250a73a2fb80b78f8c4d49e4}} 
+\index{source.c@{source.c}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void handle\+Input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{g,  }\item[{int $\ast$}]{running }\end{DoxyParamCaption})}
+
+
+
+Gère les événements clavier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Structure \mbox{\hyperlink{structGame}{Game}}. \\
+\hline
+{\em running} & Etat du jeu. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_ae204477fe7b7e4d8dcb948699085fc5e}\label{source_8c_ae204477fe7b7e4d8dcb948699085fc5e}} 
+\index{source.c@{source.c}!initGame@{initGame}}
+\index{initGame@{initGame}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{initGame()}{initGame()}}
+{\footnotesize\ttfamily int init\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Initialise le jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Structure \mbox{\hyperlink{structGame}{Game}}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 si succès. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{source_8c_a0a1a8875e40c1827e5ceb3bfdab5c0c9}\label{source_8c_a0a1a8875e40c1827e5ceb3bfdab5c0c9}} 
+\index{source.c@{source.c}!initGuide@{initGuide}}
+\index{initGuide@{initGuide}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{initGuide()}{initGuide()}}
+{\footnotesize\ttfamily void init\+Guide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGuide}{Guide}} $\ast$}]{g,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{const char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+Initialise un guide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \mbox{\hyperlink{structGuide}{Guide}}. \\
+\hline
+{\em renderer} & Renderer SDL. \\
+\hline
+{\em path} & Chemin image. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_aeee2454954a0c8489b341607f0655c35}\label{source_8c_aeee2454954a0c8489b341607f0655c35}} 
+\index{source.c@{source.c}!initPlateformes@{initPlateformes}}
+\index{initPlateformes@{initPlateformes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{initPlateformes()}{initPlateformes()}}
+{\footnotesize\ttfamily void init\+Plateformes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$}]{lp,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{r,  }\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Initialise les plateformes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp} & Liste des plateformes. \\
+\hline
+{\em r} & Renderer SDL. \\
+\hline
+{\em level} & Niveau actuel. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_a19944c681a4c50441ce2c2b6ba251006}\label{source_8c_a19944c681a4c50441ce2c2b6ba251006}} 
+\index{source.c@{source.c}!initTimer@{initTimer}}
+\index{initTimer@{initTimer}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{initTimer()}{initTimer()}}
+{\footnotesize\ttfamily void init\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTimer}{Timer}} $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+Initialise le timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \mbox{\hyperlink{structTimer}{Timer}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_af5d0ee3a173af14558f209733134ddd2}\label{source_8c_af5d0ee3a173af14558f209733134ddd2}} 
+\index{source.c@{source.c}!renderGame@{renderGame}}
+\index{renderGame@{renderGame}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{renderGame()}{renderGame()}}
+{\footnotesize\ttfamily void render\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Affiche le jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Structure \mbox{\hyperlink{structGame}{Game}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_a8c05edeaebd1c71299fec40e80857fa4}\label{source_8c_a8c05edeaebd1c71299fec40e80857fa4}} 
+\index{source.c@{source.c}!renderGuide@{renderGuide}}
+\index{renderGuide@{renderGuide}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{renderGuide()}{renderGuide()}}
+{\footnotesize\ttfamily void render\+Guide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGuide}{Guide}} $\ast$}]{g,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Affiche le guide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \mbox{\hyperlink{structGuide}{Guide}}. \\
+\hline
+{\em renderer} & Renderer SDL. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_a09d0dd28d646fb210ce8f17287c46e3d}\label{source_8c_a09d0dd28d646fb210ce8f17287c46e3d}} 
+\index{source.c@{source.c}!renderPlateformes@{renderPlateformes}}
+\index{renderPlateformes@{renderPlateformes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{renderPlateformes()}{renderPlateformes()}}
+{\footnotesize\ttfamily void render\+Plateformes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$}]{lp,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{r,  }\item[{int}]{camX }\end{DoxyParamCaption})}
+
+
+
+Affiche les plateformes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp} & Liste des plateformes. \\
+\hline
+{\em r} & Renderer SDL. \\
+\hline
+{\em camX} & Position caméra. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_a89386fc02ee164f45da3ba5742a1217b}\label{source_8c_a89386fc02ee164f45da3ba5742a1217b}} 
+\index{source.c@{source.c}!renderTimer@{renderTimer}}
+\index{renderTimer@{renderTimer}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{renderTimer()}{renderTimer()}}
+{\footnotesize\ttfamily void render\+Timer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structTimer}{Timer}} $\ast$}]{t,  }\item[{SDL\+\_\+\+Renderer $\ast$}]{renderer,  }\item[{TTF\+\_\+\+Font $\ast$}]{font }\end{DoxyParamCaption})}
+
+
+
+Affiche le timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \mbox{\hyperlink{structTimer}{Timer}}. \\
+\hline
+{\em renderer} & Renderer SDL. \\
+\hline
+{\em font} & Police utilisée. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_a7b6a5c9dfe57afe65d512e042401f663}\label{source_8c_a7b6a5c9dfe57afe65d512e042401f663}} 
+\index{source.c@{source.c}!showGuide@{showGuide}}
+\index{showGuide@{showGuide}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{showGuide()}{showGuide()}}
+{\footnotesize\ttfamily void show\+Guide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGuide}{Guide}} $\ast$}]{g,  }\item[{int}]{timed }\end{DoxyParamCaption})}
+
+
+
+Active un guide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \mbox{\hyperlink{structGuide}{Guide}}. \\
+\hline
+{\em timed} & Affichage temporaire. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_ac9088da52d09528732f1726a2d5148b5}\label{source_8c_ac9088da52d09528732f1726a2d5148b5}} 
+\index{source.c@{source.c}!updateGame@{updateGame}}
+\index{updateGame@{updateGame}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{updateGame()}{updateGame()}}
+{\footnotesize\ttfamily void update\+Game (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGame}{Game}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Met à jour le jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & Structure \mbox{\hyperlink{structGame}{Game}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_aca747886254d0c8cf1a5edfc067f8f33}\label{source_8c_aca747886254d0c8cf1a5edfc067f8f33}} 
+\index{source.c@{source.c}!updateGuide@{updateGuide}}
+\index{updateGuide@{updateGuide}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{updateGuide()}{updateGuide()}}
+{\footnotesize\ttfamily void update\+Guide (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structGuide}{Guide}} $\ast$}]{g }\end{DoxyParamCaption})}
+
+
+
+Met à jour le guide. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & \mbox{\hyperlink{structGuide}{Guide}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{source_8c_ac1faa63584ce0e79f7499384cdb063d6}\label{source_8c_ac1faa63584ce0e79f7499384cdb063d6}} 
+\index{source.c@{source.c}!updatePlateformes@{updatePlateformes}}
+\index{updatePlateformes@{updatePlateformes}!source.c@{source.c}}
+\doxysubsubsection{\texorpdfstring{updatePlateformes()}{updatePlateformes()}}
+{\footnotesize\ttfamily void update\+Plateformes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structListePlateformes}{Liste\+Plateformes}} $\ast$}]{lp }\end{DoxyParamCaption})}
+
+
+
+Met à jour les plateformes mobiles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lp} & Liste des plateformes. \\
+\hline
+\end{DoxyParams}
